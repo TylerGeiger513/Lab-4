@@ -1,10 +1,7 @@
 [TITLE + EXAMPLE]: #
 
 # LAB 4
-<div style='display:flex;align-items:center;flex-direction:row;flex-wrap:nowrap;width:500px;'>
-   <img src='./file.svg'/>
-   <p>main.c</p>
-</div>
+![FileIcon](./file.svg) main.c
 
 ```c 
 #include <stdio.h>
