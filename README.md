@@ -1,4 +1,4 @@
-<div style='text-align:center;'>
+<center>
   # Lab 4
   ```c
     #include <stdio.h>
@@ -8,4 +8,4 @@
         return 0;
      }
   ```
-</div>
+ </center>
