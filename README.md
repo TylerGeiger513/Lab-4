@@ -10,7 +10,7 @@ int main() {
    return 0;
 }
 ```
-Terminal Syntax:
+CMD Line Labels:
 :----:
 | User Input: `$`| 
 Compiler Output: `>`
@@ -19,7 +19,7 @@ Compiler Output: `>`
 Task 1: *Describe at least 5 gcc flags*
 
 ---
-`-o` *Output File Flag*
+### `-o` *Output File Flag*
 
    When the `-o` flag is used, the output file’s name is assigned to the specified name preceding it, for example:
    ```
@@ -34,11 +34,11 @@ Task 1: *Describe at least 5 gcc flags*
    > Hello World!
    ```
 ---
-`-E` *Preprocessor Flag*
+### `-E` *Preprocessor Flag*
   
-  Before C code can be compiled to assembly code, it needs to be pre-proccessed. The preproccessor is explained <a href='https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm' target='_blank'>here</a>
+  Before C code can be compiled to assembly code, it needs to be pre-proccessed. The preproccessor is explained [here](https://www.tutorialspoint.com/cprogramming/c_preprocessors.htm)
 
-  The preprocessor flag tells GCC to stop the compilation after the preprocessor before the code is assembled into machine language, this flag is useful to ensure that the program is correctly processed by the preprocessor. Using the -E flag on a C program will print the preproccessed code to the command line: 
+  The preprocessor flag tells GCC to stop the compilation after the preprocessor, this flag is useful to ensure that the program is correctly processed by the preprocessor. Using the -E flag on a C program will print the preproccessed code to the command line: 
   <pre><code>
   $ gcc -E main.c 
   > <i>{preproccessed stdio.h code}</i>
@@ -56,5 +56,9 @@ Task 1: *Describe at least 5 gcc flags*
   >   printf("Hello, World!");
   >   return 0;
   > }
-  ```
   </code></pre>
+---
+### `-Wall` Warning Flag
+
+
+
