@@ -1,1 +1,1 @@
-<h1 text-align="center">LAB 4</h1>
+<h1 style="text-align=center">LAB 4</h1>
