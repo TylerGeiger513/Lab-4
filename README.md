@@ -1,9 +1,7 @@
 [TITLE + EXAMPLE]: #
 
 # LAB 4
-<img src='/file.svg'/> 
-*main.c*
-
+<img src='/file.svg'/> *main.c*
 ```c 
 #include <stdio.h>
 int main() {
