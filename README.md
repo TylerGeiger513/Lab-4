@@ -30,6 +30,8 @@ int main() {
 </table>
 
 --- 
+## GCC FLAGS
+--- 
 <br><br>
 ### `-o` *Output File Flag*
    
@@ -114,7 +116,7 @@ int main() {
    
    However, if you had intended to use a third party header file, or create your own, they must be in your current directory. If the header file's are located outside of your current directory, the GCC compiler will not know where to look. This is where the `-I` flag is essential.
    
-   Assume you are starting a large project, and you plan on using a large amount of custom header files, which you have placed in a directory named `headers`. Your current directory looks something like this:
+   Assume you are starting a new project, and you plan on using a large amount of custom header files, which you have placed in a directory named `headers`. Your current directory looks something like this:
 
 <table>
    <tr>
@@ -171,10 +173,67 @@ warning: variable 'a' is uninitialized when used here [-Wuninitialized]
            ^
 ```
 
+<br><br>
+---
+GDB Commands
+---
+<br><br>
+        
+### `run`
 
+In GDB the `run` command executes the program from the beginning, this is how you start the debugger. 
+Once you have compiled the program using `gcc main.c -o main` and started the debugger using `gdb main` you would use the `run` command to execute the program until it you reach a breakpoint or the end of the program.
 
-   
+<br><br>
+--- 
+<br><br>
 
+### `break`
 
+The `break` command sets a breakpoint at the specified location... Without any arguments, the `break` command will set a breakpoint for the current line, if you would like to place a breakpoint elsewhere you will need to pass the location and/or condition like: 
 
+`break [location] [condition]`
+
+`[location]` can be specified multiple ways... 
+   1. If you would like to set breakpoint at line *5* you would do `break 5` 
+   2. If you would like to set a breakpoint when a function begins, you can pass the functions name... such as main: `break main`
+   3. If you would like to set a breakpoint at a memory address you can do so like: `break 0x12345678`
+  
+ `[condition]` is optional, however is useful if you would only like to break if the condition is met. For example, if you would like to break on the fifth iteration of a for loop in main.c you could use: `break [line number of loop] i==5`
+
+<br><br>
+--- 
+<br><br>
+
+### `step`
+
+The `step` command executes or *steps into* the next line of code in your program... This is useful for tracing your program line by line to identify where or why an issue is occuring. The `step` command can be used repeatedly to slowly execute your code line by line. 
+
+Additionally, you can specify the amount of lines you would like to step forward using the syntax: `step N` with `N` being the number of lines you would like to execute.
+        
+<br><br>
+--- 
+<br><br>
+
+### `info`
+
+The `info` command is used to show information about the current debug process. This command has many arguments, most can be found in the docs [here](https://visualgdb.com/gdbreference/commands/#:~:text=information%20displaying%20comands)
+
+Some useful arguments to pass the info command are 
+`info breakpoints` - Information about currently set breakpoints
+`info locals` - Values of the *local* variables at the current point of execution
+`info variables` - Values of the variables at the current point of execution
+`info functions` - Information about the programs functions
+`info line` - Information about the current line
+
+<br><br>
+--- 
+<br><br>
+
+### `delete`
+
+The delete command is used to delete breakpoints set in the debugger... 
+
+To get a list of the breakpoints you can use the `info breakpoints` command described above, so you can then use `delete [breakpoint-num]` to delete the breakpoint of choice...
+```
 
