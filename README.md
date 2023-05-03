@@ -5,6 +5,7 @@
 <tr>
    <td><img width='12' height='12' src='/file.svg'/> <em>main.c</em></td>
    <td>GCC Flags</td>
+   <td>GDB Commands</td>
 </tr>
 <tr>
 <td>
@@ -25,6 +26,14 @@ int main() {
    <a href="#-i-header-directory-flag">-I (header directory)</a><br>
    <a href="#-x-language">-x (language)</a><br>
    <a href="#-wall-warning-all-flag">-Wall (warning all)</a>
+</td>
+<td>
+   <a href="#run">run</a><br>
+   <a href="#break">break</a><br>
+   <a href="#step">step</a><br>
+   <a href="#info">info</a><br>
+   <a href="#delete">delete</a><br>
+   
 </td>
 </tr>
 </table>
