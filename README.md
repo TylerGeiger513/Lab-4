@@ -21,7 +21,7 @@ int main() {
 </td>
 <td>
 
-[-o](-e-preprocessor-flag);
+[-o](-p-preprocessor-flag);
 
 row below
 </td>
