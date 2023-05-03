@@ -103,6 +103,15 @@ int main() {
   }
   ```
 ---
+### `-I` Header Flag
+
+   As explained above in the [-E](#-e-preproccessor-flag) when a c program is preprocessed, the included libraries *`(#include <stdio.h>`* are concatenated to the program... Since the *stdio.h* library is a default c library, you do not need to provide the compiler with it's directory.
+   
+   However, if you had intended to use a third party header file, or create your own, they must be in your current directory. If the header file's are located outside of your current directory, the GCC compiler will not know where to look. This is where the `-I` flag is essential.
+   
+   Assume you are starting a large project, and you plan on using a large amount of custom header files. 
+
+---
 ### `-x` Language
    
    By default, GCC will attempt to compile files based off of their extension, so `gcc main.c` would compile for the `c` language, while `gcc main.cpp` would compile as a `c++` program.
@@ -115,6 +124,8 @@ $ gcc -x c main.txt -o myFile
 $ ./myFile
 Hello World!
 ```
+
+---
 
    
 
