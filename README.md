@@ -19,12 +19,12 @@ int main() {
 ```
 
 </td>
-   
-   <td>
-   
-      [-o]()
-      
-   </td>
+<td>
+
+[-o](-e-preprocessor-flag);
+
+row below
+</td>
 </tr>
 </table>
 
