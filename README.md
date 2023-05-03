@@ -103,13 +103,29 @@ int main() {
   }
   ```
 ---
-### `-I` Header Flag
+### `-I` Header Directory Flag
 
-   As explained above in the [-E](#-e-preproccessor-flag) when a c program is preprocessed, the included libraries *`(#include <stdio.h>`* are concatenated to the program... Since the *stdio.h* library is a default c library, you do not need to provide the compiler with it's directory.
+   As explained above in the [-E](#-e-preprocessor-flag) when a c program is preprocessed, the included libraries *`(#include <stdio.h>)`* are concatenated to the program... Since the *stdio.h* library is a default c library, you do not need to provide the compiler with it's directory.
    
    However, if you had intended to use a third party header file, or create your own, they must be in your current directory. If the header file's are located outside of your current directory, the GCC compiler will not know where to look. This is where the `-I` flag is essential.
    
-   Assume you are starting a large project, and you plan on using a large amount of custom header files. 
+   Assume you are starting a large project, and you plan on using a large amount of custom header files, which you have placed in a directory named `headers`. Your current directory looks something like this:
+
+<table>
+   <tr>
+      <td>
+         ><img width='20' height='20' src='/folder.svg'/>Current-Directory<br>&emsp;&emsp;
+         ><img width='20' height='20' src='/folder.svg'/> headers <br>&emsp;&emsp;&emsp;&emsp;
+            ><img width='12' height='12' src='/file.svg'/> libcurl.h<br>&emsp;&emsp;&emsp;&emsp;
+            ><img width='12' height='12' src='/file.svg'/> SQLite.h<br>&emsp;&emsp;&emsp;&emsp;
+            ><img width='12' height='12' src='/file.svg'/> OpenSSL.h<br>&emsp;&emsp;
+         ><img width='20' height='20' src='/folder.svg'/> src <br>&emsp;&emsp;&emsp;
+            ><img width='12' height='12' src='/file.svg'/> main.c<br>&emsp;&emsp;&emsp;
+      </td>
+   </tr>
+</table>
+
+Assuming you have added the necessary `#include` lines for each header file to the beginning of main.c, simply running ```gcc main.c``` would not compile... Instead you would need to use the `-I` flag to show the compiler what directory the header files are located in. In this example, to compile main.c you would need to run `gcc -I/headers main.c` 
 
 ---
 ### `-x` Language
