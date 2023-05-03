@@ -244,5 +244,5 @@ Some useful arguments to pass the info command are
 The delete command is used to delete breakpoints set in the debugger... 
 
 To get a list of the breakpoints you can use the `info breakpoints` command described above, so you can then use `delete [breakpoint-num]` to delete the breakpoint of choice...
-```
+
 
