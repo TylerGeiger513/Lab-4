@@ -1,8 +1,15 @@
 [TITLE + EXAMPLE]: #
+### Lab 4:   Tyler Geiger
 
-# LAB 4
-<img width='12' height='12' src='/file.svg'/> *main.c*
-```c 
+<table>
+<tr>
+   <td><img width='12' height='12' src='/file.svg'/> <em>main.c</em></td>
+   <td>GCC Flags</td>
+</tr>
+<tr>
+<td>
+
+```c
 #include <stdio.h>
 int main() {
    // example program 
@@ -11,11 +18,16 @@ int main() {
 }
 ```
 
-CMD Line Labels:
-:----:
-| User Input: `$`| 
-Compiler Output: `>`
---- 
+</td>
+   
+   <td>
+   
+      [-o]()
+      
+   </td>
+</tr>
+</table>
+
 
 Task 1: *Describe at least 5 gcc flags*
 
