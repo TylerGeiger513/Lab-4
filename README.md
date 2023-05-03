@@ -21,11 +21,11 @@ int main() {
 
 </td>
 <td>
-   <a href="#-o-output-file-flag">-o (output file)</a><br>
-   <a href="#-e-preprocessor-flag">-E (preprocessor)</a><br>
-   <a href="#-i-header-directory-flag">-I (header directory)</a><br>
-   <a href="#-x-language">-x (language)</a><br>
-   <a href="#-wall-warning-all-flag">-Wall (warning all)</a>
+   <a href="#-o-output-file-flag">-o</a><br>
+   <a href="#-e-preprocessor-flag">-E</a><br>
+   <a href="#-i-header-directory-flag">-I</a><br>
+   <a href="#-x-language">-x</a><br>
+   <a href="#-wall-warning-all-flag">-Wall</a>
 </td>
 <td>
    <a href="#run">run</a><br>
