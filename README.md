@@ -1,7 +1,7 @@
 [TITLE + EXAMPLE]: #
 *I accidentally titled this lab 4... this is my lab 5 submission*
 
-### Lab 4:   Tyler Geiger
+### Lab 5:   Tyler Geiger
 <table>
 <tr>
    <td><img width='12' height='12' src='/file.svg'/> <em>main.c</em></td>
